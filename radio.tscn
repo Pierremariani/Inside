@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dt5wm4mho8ay7"]
+
+[ext_resource type="PackedScene" uid="uid://bws14m3tbaww8" path="res://prop1/space_age_radio.glb" id="1_gx1a3"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_gx1a3")]

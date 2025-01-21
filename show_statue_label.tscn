@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://cook84j8wbb0l"]
+
+[node name="showStatueLabel" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1329.0
+offset_top = 60.0
+offset_right = 1546.0
+offset_bottom = 84.0
+theme_override_font_sizes/font_size = 19
+text = "In hand : Demon Statue"
+uppercase = true

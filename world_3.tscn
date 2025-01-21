@@ -1,0 +1,335 @@
+[gd_scene load_steps=47 format=3 uid="uid://diys8l6tevfu5"]
+
+[ext_resource type="Script" path="res://world_3.gd" id="1_4ourw"]
+[ext_resource type="Texture2D" uid="uid://bjgskpbt5cvn5" path="res://texture2/Textures/LogWall/LogWall_Diffuse.png" id="1_nx8gm"]
+[ext_resource type="PackedScene" uid="uid://mvods1iqpv2q" path="res://basement.tscn" id="2_6sv12"]
+[ext_resource type="PackedScene" uid="uid://dlunp81sr3hvs" path="res://player.tscn" id="3_mbc7r"]
+[ext_resource type="PackedScene" uid="uid://c6wtmxll0vmt6" path="res://pentagramsatan.tscn" id="4_8j2yt"]
+[ext_resource type="PackedScene" uid="uid://dvu05pvxc4agp" path="res://firstitem.tscn" id="5_4l3y3"]
+[ext_resource type="PackedScene" uid="uid://cdqo5ng6raq4y" path="res://Interactions/Interactable.tscn" id="5_qlf0y"]
+[ext_resource type="Script" path="res://SubViewportContainer.gd" id="8_2nylr"]
+[ext_resource type="PackedScene" uid="uid://dsluslaviwapf" path="res://objectennemie.tscn" id="9_t0ife"]
+[ext_resource type="AudioStream" uid="uid://1o6iqsojxpo0" path="res://soundetmusic/endstressmusic.mp3" id="10_r45al"]
+[ext_resource type="AudioStream" uid="uid://p2wooitclpxq" path="res://soundetmusic/ASMR _ Bruit de Battement cardiaque ❤️ (mp3cut.net).mp3" id="11_6r7ly"]
+[ext_resource type="AudioStream" uid="uid://bo16ee5nbsc6n" path="res://soundetmusic/firstitemmusic.mp3" id="12_4yyg6"]
+[ext_resource type="AudioStream" uid="uid://cwjr36i67nrwq" path="res://soundetmusic/pickupbruitage.mp3" id="13_pg23m"]
+[ext_resource type="AudioStream" uid="uid://17chj4nafcvd" path="res://soundetmusic/Mica Levi - Lipstick to Void (Under the Skin Original Motion Picture Soundtrack).mp3" id="14_aig3r"]
+[ext_resource type="AudioStream" uid="uid://bfdt6v1y6t667" path="res://soundetmusic/eclair.mp3" id="15_dcj71"]
+[ext_resource type="AudioStream" uid="uid://b7wxmuqvesxss" path="res://soundetmusic/souffle_air.mp3" id="16_xpy85"]
+[ext_resource type="PackedScene" uid="uid://cp18g0rsp1qua" path="res://mask.tscn" id="17_w1n3v"]
+[ext_resource type="PackedScene" uid="uid://dkjc58ta2yem7" path="res://doorpop1.tscn" id="18_dkp5f"]
+[ext_resource type="AudioStream" uid="uid://bqoxwwj8vyggr" path="res://soundetmusic/rireclown.mp3" id="19_d3qqd"]
+[ext_resource type="AudioStream" uid="uid://c2h8vkyoh12rr" path="res://soundetmusic/Horror Music & Creepy Sounds (320 kbps).mp3" id="20_1c0gq"]
+
+[sub_resource type="Environment" id="Environment_fcki6"]
+background_mode = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g0mir"]
+size = Vector3(2.9458, 1.5675, 2.67456)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_njvbm"]
+size = Vector2(2, 2.1)
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_2jjr4"]
+viewport_path = NodePath("screen/SubViewport")
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_hk1ex"]
+viewport_path = NodePath("screen/SubViewport")
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_qsc3j"]
+resource_local_to_scene = true
+albedo_texture = SubResource("ViewportTexture_2jjr4")
+emission_enabled = true
+emission_energy_multiplier = 3.0
+emission_texture = SubResource("ViewportTexture_hk1ex")
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_58ln5"]
+file = "res://soundetmusic/THX-but-it-keeps-rising-till...-_WARNING_-_online-video-cutter.com_.ogv"
+
+[sub_resource type="VideoStreamTheora" id="VideoStreamTheora_hssmn"]
+file = "res://soundetmusic/Grésillement-tv.ogv"
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_5adx8"]
+size = Vector3(3.23053, 1.27429, 1.88184)
+
+[sub_resource type="Animation" id="Animation_xwrdc"]
+resource_name = "run"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector3(-5.17712, 2.36458, 2.72121), Vector3(5.56553, 2.36458, 7.09671)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_oye72"]
+_data = {
+"run": SubResource("Animation_xwrdc")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6n6au"]
+size = Vector3(6.02856, 1, 2.91565)
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_vfk3d"]
+vertices = PackedVector3Array(-9.5, 0.5, -9.5, -9.5, 0.5, 9.5, 9.5, 0.5, 9.5, 9.5, 0.5, -9.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_xq62p"]
+size = Vector3(25, 0.0340576, 43)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1q185"]
+albedo_color = Color(0.384314, 0.384314, 0.384314, 1)
+albedo_texture = ExtResource("1_nx8gm")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_fmd56"]
+material = SubResource("StandardMaterial3D_1q185")
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_mtgo1"]
+size = Vector3(2.23169, 1, 4.33521)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_433bv"]
+size = Vector3(31.3578, 127.049, 68.4969)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_n5uk2"]
+size = Vector3(1, 1, 18.8655)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rieks"]
+size = Vector3(11.0538, 2.49658, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_e8uhh"]
+size = Vector3(1, 2.91113, 18.1216)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_yklxy"]
+size = Vector3(13.129, 5.89441, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_d1emw"]
+size = Vector3(1, 2.31055, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_txfnk"]
+size = Vector3(0.208496, 4.62018, 5.90967)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m6660"]
+size = Vector3(0.0966797, 2.92725, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_qkaad"]
+size = Vector3(2.45422, 1.02686, 2.94876)
+
+[node name="world3" type="Node3D"]
+script = ExtResource("1_4ourw")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_fcki6")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.101786, 0.994806, 0, -0.994806, -0.101786, 0, 4.6688, 0)
+visible = false
+
+[node name="cave" parent="." instance=ExtResource("2_6sv12")]
+transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, -0.602787, 2.36408, -0.527101)
+
+[node name="Player" parent="." instance=ExtResource("3_mbc7r")]
+transform = Transform3D(1.3, 0, 0, 0, 1.3, 0, 0, 0, 1.3, 0.147919, 3.00966, 2.76132)
+
+[node name="pentaworld3" parent="." instance=ExtResource("4_8j2yt")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 2.82199, 7.87728)
+
+[node name="Interactable" parent="pentaworld3" instance=ExtResource("5_qlf0y")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="pentaworld3/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0694094, 0.291269, -0.0142355)
+shape = SubResource("BoxShape3D_g0mir")
+
+[node name="item13" parent="." instance=ExtResource("5_4l3y3")]
+transform = Transform3D(-0.997666, 0, -0.0682766, 0, 1, 0, 0.0682766, 0, -0.997666, 0.68359, 3.03563, 7.70737)
+
+[node name="item23" parent="." instance=ExtResource("5_4l3y3")]
+transform = Transform3D(-0.999995, 0, -0.00321135, 0, 1, 0, 0.00321135, 0, -0.999995, 0.296689, 3.04025, 8.39437)
+visible = false
+
+[node name="screen" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.128207, -0.271225, 0, 0.271225, 0.128207, 0, 0, 0, 0.4, 3.80996, 4.08235, -1.16792)
+mesh = SubResource("PlaneMesh_njvbm")
+surface_material_override/0 = SubResource("StandardMaterial3D_qsc3j")
+
+[node name="SubViewport" type="SubViewport" parent="screen"]
+size = Vector2i(1280, 720)
+
+[node name="SubViewportContainer" type="SubViewportContainer" parent="screen/SubViewport"]
+scale = Vector2(3.6, 1.15)
+pivot_offset = Vector2(1, 0)
+script = ExtResource("8_2nylr")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="screen/SubViewport/SubViewportContainer"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_58ln5")
+volume_db = -30.08
+
+[node name="SubViewportContainer2" type="SubViewportContainer" parent="screen/SubViewport"]
+offset_right = 40.0
+offset_bottom = 40.0
+scale = Vector2(3, 3)
+
+[node name="vid2" type="VideoStreamPlayer" parent="screen/SubViewport/SubViewportContainer2"]
+layout_mode = 2
+stream = SubResource("VideoStreamTheora_hssmn")
+volume_db = -55.0
+
+[node name="Interactable" parent="screen" instance=ExtResource("5_qlf0y")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="screen/Interactable"]
+transform = Transform3D(1, 5.96046e-08, 0, -5.96046e-08, 1, 0, 0, 0, 0.999984, -0.648718, 0.137143, 0.00341892)
+shape = SubResource("BoxShape3D_5adx8")
+
+[node name="mechant" parent="." instance=ExtResource("9_t0ife")]
+transform = Transform3D(-0.589054, 0, 1.64788, 0, 1.75, 0, -1.64788, 0, -0.589054, -5.17712, 2.36458, 2.72121)
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="mechant"]
+libraries = {
+"": SubResource("AnimationLibrary_oye72")
+}
+
+[node name="Interactable" parent="mechant" instance=ExtResource("5_qlf0y")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mechant/Interactable"]
+transform = Transform3D(1, 0, -8.9407e-08, 0, 1.00017, 0, 8.9407e-08, 0, 1, -2.16223, 0, 0.765483)
+shape = SubResource("BoxShape3D_6n6au")
+
+[node name="bimmechant" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3, 4, 2)
+stream = ExtResource("10_r45al")
+volume_db = -6.587
+
+[node name="coeur" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("11_6r7ly")
+volume_db = -10.578
+
+[node name="ou" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("12_4yyg6")
+volume_db = -23.802
+
+[node name="put" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 4.13808, 7.58641)
+stream = ExtResource("13_pg23m")
+volume_db = -17.19
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.95006, 0)
+navigation_mesh = SubResource("NavigationMesh_vfk3d")
+
+[node name="floor" type="StaticBody3D" parent="NavigationRegion3D"]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.637502, 0.512973, 4.3903)
+shape = SubResource("BoxShape3D_xq62p")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floor"]
+visible = false
+mesh = SubResource("PlaneMesh_fmd56")
+
+[node name="Spawns" type="Node3D" parent="."]
+
+[node name="spawn3" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0.076447, -3)
+
+[node name="spawn1" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.79079, 2.54828, -3.36824)
+
+[node name="spawn4" type="Node3D" parent="Spawns"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 2, 8)
+
+[node name="mechantspawntimer" type="Timer" parent="."]
+wait_time = 2.0
+autostart = true
+
+[node name="ambiance" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("14_aig3r")
+volume_db = -23.802
+
+[node name="endspawn" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("15_dcj71")
+volume_db = -21.157
+
+[node name="takepelle" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.23263, 3.07482, -0.734904)
+stream = ExtResource("16_xpy85")
+volume_db = -33.058
+
+[node name="mask" parent="." instance=ExtResource("17_w1n3v")]
+transform = Transform3D(0.164684, 0.249401, -0.0260422, -0.0738077, 0.0184348, -0.290194, -0.239649, 0.165708, 0.0714788, -1.68971, 2.3536, -5.12488)
+
+[node name="Interactable" parent="mask" instance=ExtResource("5_qlf0y")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="mask/Interactable"]
+transform = Transform3D(1.00001, -2.98023e-08, -1.47521e-06, -2.98023e-08, 1, -2.68221e-07, 4.47035e-08, 0, 1, 0.072855, 0.0298223, -2.13709)
+shape = SubResource("BoxShape3D_mtgo1")
+
+[node name="door" parent="." instance=ExtResource("18_dkp5f")]
+transform = Transform3D(0.02, 0, 0, 0, 0.02, 0, 0, 0, 0.02, -5.27314, 2.41712, 5.87971)
+visible = false
+
+[node name="Interactable" parent="door" instance=ExtResource("5_qlf0y")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="door/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3686, 63.1152, 0.035553)
+shape = SubResource("BoxShape3D_433bv")
+
+[node name="walls3" type="StaticBody3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="walls3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.15098, 2.8493, 0.263154)
+shape = SubResource("BoxShape3D_n5uk2")
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="walls3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.114319, 3.10671, -8.01798)
+shape = SubResource("BoxShape3D_rieks")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="walls3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.87933, 3.65658, 1.56177)
+shape = SubResource("BoxShape3D_e8uhh")
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="walls3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0253296, 2.4472, 10.2102)
+shape = SubResource("BoxShape3D_yklxy")
+
+[node name="CollisionShape3D5" type="CollisionShape3D" parent="walls3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.8792, 3.65527, -1.14703)
+shape = SubResource("BoxShape3D_d1emw")
+
+[node name="CollisionShape3D6" type="CollisionShape3D" parent="walls3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.15885, 3.92716, -1.92529)
+shape = SubResource("BoxShape3D_txfnk")
+
+[node name="CollisionShape3D7" type="CollisionShape3D" parent="walls3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.13458, 3.60945, -7.00149)
+shape = SubResource("BoxShape3D_m6660")
+
+[node name="CollisionShape3D8" type="CollisionShape3D" parent="walls3"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.37283, 2.7465, -0.462906)
+shape = SubResource("BoxShape3D_qkaad")
+
+[node name="clown" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("19_d3qqd")
+volume_db = -29.091
+
+[node name="doorsound" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4, 2, 7)
+stream = ExtResource("10_r45al")
+volume_db = -23.801
+
+[node name="fond" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("20_1c0gq")
+volume_db = -44.959
+autoplay = true
+
+[connection signal="animation_finished" from="mechant/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="timeout" from="mechantspawntimer" to="." method="_on_mechantspawntimer_timeout"]

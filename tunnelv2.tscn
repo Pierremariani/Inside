@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://vgyfmea6w3j5"]
+
+[ext_resource type="PackedScene" uid="uid://i643ekwnrfee" path="res://texture6/tutunenel.glb" id="1_slchh"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_slchh")]

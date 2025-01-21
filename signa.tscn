@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://dw0ih7fwdyq7k"]
+
+[node name="signa" type="Node2D"]
+
+[node name="Label" type="Label" parent="."]
+offset_left = 1724.0
+offset_top = 1002.0
+offset_right = 1854.0
+offset_bottom = 1025.0
+text = "Azmorg - beta.v1"

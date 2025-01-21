@@ -1,0 +1,48 @@
+[gd_scene load_steps=9 format=3 uid="uid://d4xnuhy4aiu"]
+
+[ext_resource type="PackedScene" uid="uid://faqt4aycm2sj" path="res://texture6/dae_diorama_-_rustborn.glb" id="1_wwh5h"]
+[ext_resource type="Texture2D" uid="uid://bjgskpbt5cvn5" path="res://texture2/Textures/LogWall/LogWall_Diffuse.png" id="2_x42my"]
+[ext_resource type="PackedScene" uid="uid://dlunp81sr3hvs" path="res://player.tscn" id="3_iajns"]
+
+[sub_resource type="Environment" id="Environment_10r2t"]
+background_mode = 1
+background_color = Color(0.0627451, 0.0627451, 0.0627451, 1)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_1wyl5"]
+size = Vector3(19.0006, 0.0340576, 19.3794)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ov5mw"]
+albedo_color = Color(0.384314, 0.384314, 0.384314, 1)
+albedo_texture = ExtResource("2_x42my")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_mqs3n"]
+material = SubResource("StandardMaterial3D_ov5mw")
+size = Vector2(20, 20)
+
+[sub_resource type="PrismMesh" id="PrismMesh_yolny"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_wwh5h")]
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="." index="1"]
+environment = SubResource("Environment_10r2t")
+
+[node name="floor" type="StaticBody3D" parent="." index="2"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.87485, -0.00140381, -0.207942)
+shape = SubResource("BoxShape3D_1wyl5")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor" index="1"]
+visible = false
+mesh = SubResource("PlaneMesh_mqs3n")
+
+[node name="Player" parent="." index="3" instance=ExtResource("3_iajns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7, 1, 0)
+
+[node name="stairs" type="StaticBody3D" parent="." index="4"]
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="stairs" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.49975, 1.04238, 3.88965)
+visible = false
+mesh = SubResource("PrismMesh_yolny")

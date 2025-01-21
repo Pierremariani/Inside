@@ -1,0 +1,8 @@
+[gd_scene load_steps=2 format=3 uid="uid://dkjc58ta2yem7"]
+
+[ext_resource type="PackedScene" uid="uid://c13syubdd7aeu" path="res://texture5/front_door.glb" id="1_h5kro"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_h5kro")]
+
+[node name="door" parent="Sketchfab_model/88b38f8db19d44e98a0a6580aa47f0f9_fbx/Object_2/RootNode" index="1"]
+transform = Transform3D(0.073375, 0, 0, 0, -3.20732e-09, 0.073375, 0, -0.073375, -3.20732e-09, -20.0733, 62.415, 29.0654)

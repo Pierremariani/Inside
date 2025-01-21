@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://1robi2l2hofd"]
+
+[ext_resource type="PackedScene" uid="uid://clrcd3sslxdq4" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures_2.tscn" id="1_nv4dl"]
+
+[node name="WoodFurnitures_2" instance=ExtResource("1_nv4dl")]

@@ -1,0 +1,114 @@
+[gd_scene load_steps=2 format=3 uid="uid://crsncvnscyo8q"]
+
+[ext_resource type="PackedScene" uid="uid://lj184jrew4nc" path="res://texture8/porcelain_polly.glb" id="1_jlmwp"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_jlmwp")]
+
+[node name="FKRoot_M" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/FKSystem/FKFollowRoot/FKOffsetRoot_M/FKExtraRoot_M" index="0"]
+transform = Transform3D(1, 0, -3.69779e-32, 0, 1, -9.86076e-32, 3.69779e-32, 9.86076e-32, 1, 0.164785, -1.53745, -6.34007e-16)
+
+[node name="FKParentConstraintToChest_M" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/FKSystem" index="1"]
+transform = Transform3D(0, 0, 1, 0.992589, -0.121524, 0, 0.121524, 0.992589, 0, -1.6898e-16, 40.8239, 9.15297)
+
+[node name="FKParentConstraintToWrist_R" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/FKSystem" index="2"]
+transform = Transform3D(0.371369, 0.923644, 0.0946913, -0.928373, 0.370971, 0.022435, -0.0144058, -0.0962406, 0.995254, -0.561609, 34.1594, 13.5162)
+
+[node name="FKParentConstraintToScapula_R" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/FKSystem" index="3"]
+transform = Transform3D(-0.985176, -0.0236132, 0.169914, 0.170348, -0.251573, 0.952729, 0.020249, 0.96755, 0.251866, -1.55363, 42.7987, 9.37677)
+
+[node name="FKParentConstraintToWrist_L" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/FKSystem" index="4"]
+transform = Transform3D(0.416038, 0.90774, -0.0540352, 0.894354, -0.419201, -0.156211, -0.164451, 0.0166633, -0.986245, 0.5911, 34.1753, 13.8186)
+
+[node name="FKParentConstraintToScapula_L" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/FKSystem" index="5"]
+transform = Transform3D(-0.985176, -0.0236132, 0.169914, -0.170348, 0.251573, -0.952729, -0.020249, -0.96755, -0.251866, 1.55363, 42.7987, 9.37677)
+
+[node name="IKLeg_R" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/IKSystem/IKHandle/IKHandleFollowMain/IKOffsetLeg_R/IKExtraLeg_R" index="0"]
+transform = Transform3D(0.998794, -0.0489669, 0.00362811, 0.0474672, 0.944016, -0.326467, 0.0125611, 0.326245, 0.945202, 2.74115, 5.25549, -1.4371)
+
+[node name="IKLeg_L" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/IKSystem/IKHandle/IKHandleFollowMain/IKOffsetLeg_L/IKExtraLeg_L" index="0"]
+transform = Transform3D(0.9982, 0.0354697, 0.0483619, -0.0466752, 0.965802, 0.255045, -0.0376616, -0.256844, 0.965719, -1.63755, 2.67602, -0.44372)
+
+[node name="PoleOffsetLeg_R" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/IKSystem/IKHandle" index="1"]
+transform = Transform3D(0.993228, -0.115981, 0.00689282, 0.10966, 0.916189, -0.385451, 0.0383898, 0.383596, 0.922703, -22.51, 18.9835, -4.17855)
+
+[node name="PoleOffsetLeg_L" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/IKSystem/IKHandle" index="2"]
+transform = Transform3D(0.997382, 0.0690619, 0.0214612, -0.0589297, 0.948127, -0.312383, -0.0419217, 0.3103, 0.949714, 23.0006, 19.313, -3.5345)
+
+[node name="FKIKParentConstraintArm_R" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/FKIKSystem" index="0"]
+transform = Transform3D(-0.985176, -0.0236132, 0.169914, 0.170348, -0.251573, 0.952729, 0.020249, 0.96755, 0.251866, -1.55363, 42.7987, 9.37677)
+
+[node name="FKIKParentConstraintLeg_R" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/FKIKSystem" index="1"]
+transform = Transform3D(0, 0, 1, 0.996362, -0.085227, 0, 0.085227, 0.996362, 0, 5.59349e-16, 30.3745, 7.73373)
+
+[node name="FKIKParentConstraintSpine_M" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/FKIKSystem" index="2"]
+transform = Transform3D(0, 0, 1, 0.996362, -0.085227, 0, 0.085227, 0.996362, 0, 5.59349e-16, 30.3745, 7.73373)
+
+[node name="FKIKParentConstraintArm_L" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/FKIKSystem" index="3"]
+transform = Transform3D(-0.985176, -0.0236132, 0.169914, -0.170348, 0.251573, -0.952729, -0.020249, -0.96755, -0.251866, 1.55363, 42.7987, 9.37677)
+
+[node name="FKIKParentConstraintLeg_L" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/FKIKSystem" index="4"]
+transform = Transform3D(0, 0, 1, 0.996362, -0.085227, 0, 0.085227, 0.996362, 0, 5.59349e-16, 30.3745, 7.73373)
+
+[node name="AimFollowEye" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/AimSystem/AimEye/AimOffsetEye" index="0"]
+transform = Transform3D(1, 0, 0, 0, 0.999949, -0.0100967, 0, 0.0100967, 0.999949, 2.47044e-16, 2.00711, 10.2947)
+
+[node name="Fingers_R" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/DrivingSystem" index="0"]
+transform = Transform3D(1.77546, 1.98357, 0.453249, -5.40251, 0.729616, 0.0852803, -0.387692, -1.08337, 0.887295, -0.561609, 34.1594, 13.5162)
+
+[node name="Fingers_L" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/MotionSystem/DrivingSystem" index="1"]
+transform = Transform3D(-2.08481, 2.0818, -0.312851, -5.27037, -0.721685, 0.22961, 0.605336, 0.886474, 0.921631, 0.5911, 34.1753, 13.8186)
+
+[node name="Skeleton3D" parent="Sketchfab_model/51f13150fad5451dae068cb6685a399d_fbx/Object_2/RootNode/Group/DeformationSystem/Object_161" index="0"]
+bones/1/position = Vector3(5.59349e-16, 30.3745, 7.73373)
+bones/2/rotation = Quaternion(-9.92635e-34, 4.92938e-32, 0.020133, 0.999797)
+bones/3/rotation = Quaternion(4.85838e-32, 2.60421e-32, 0.0283982, 0.999597)
+bones/4/rotation = Quaternion(-1.4635e-31, 5.37606e-32, -0.0302846, 0.999541)
+bones/8/rotation = Quaternion(-1.32072e-16, 2.49002e-16, 0.709991, 0.704211)
+bones/10/rotation = Quaternion(-7.67493e-17, 2.7121e-16, 0.842218, 0.539138)
+bones/12/rotation = Quaternion(2.17002e-33, 2.18783e-33, 0.709991, 0.704211)
+bones/14/rotation = Quaternion(-0.0516734, 0.642163, 0.0430605, 0.763612)
+bones/15/rotation = Quaternion(-0.14319, 0.503613, 0.33712, 0.782445)
+bones/18/rotation = Quaternion(-0.174559, 1.5217e-17, 7.31686e-17, 0.984647)
+bones/20/rotation = Quaternion(0.00150548, 0.0421856, -0.0501733, 0.997848)
+bones/21/rotation = Quaternion(0.000319513, -0.0219894, -1.5414e-05, 0.999758)
+bones/22/rotation = Quaternion(0.00046585, -0.0320326, 2.71315e-06, 0.999487)
+bones/24/rotation = Quaternion(-0.458802, 0.00759171, 0.307498, 0.833599)
+bones/25/rotation = Quaternion(-0.0192471, 0.143739, -0.0853719, 0.985738)
+bones/28/rotation = Quaternion(0.00529442, 0.0288603, 0.0953589, 0.99501)
+bones/30/rotation = Quaternion(-0.0142801, -0.0502441, -0.000142677, 0.998635)
+bones/32/rotation = Quaternion(-0.000428169, 0.019138, -0.107985, 0.993968)
+bones/33/rotation = Quaternion(-0.00247148, 0.0188482, 8.48892e-05, 0.999819)
+bones/34/rotation = Quaternion(0.00494181, -0.0376901, -7.65251e-05, 0.999277)
+bones/36/rotation = Quaternion(-0.0107332, 0.0793844, -0.217846, 0.97269)
+bones/37/rotation = Quaternion(0.0023266, -0.00627664, -0.000285918, 0.999978)
+bones/38/rotation = Quaternion(0.0187055, -0.0502293, -0.00122907, 0.998562)
+bones/40/rotation = Quaternion(-0.642163, -0.0516734, 0.763612, -0.0430605)
+bones/41/rotation = Quaternion(-0.132587, 0.498532, 0.348035, 0.782789)
+bones/43/rotation = Quaternion(-0.00832907, 0.227419, 0.589572, 0.774995)
+bones/44/rotation = Quaternion(-0.281975, -1.68463e-17, -4.1113e-17, 0.959422)
+bones/45/rotation = Quaternion(0.0540798, 0.195895, -0.235496, 0.950391)
+bones/46/rotation = Quaternion(0.00150548, 0.0421856, -0.0501733, 0.997848)
+bones/47/rotation = Quaternion(0.000319513, -0.0219894, -1.5414e-05, 0.999758)
+bones/48/rotation = Quaternion(0.00046585, -0.0320326, 2.71315e-06, 0.999487)
+bones/50/rotation = Quaternion(-0.458802, 0.00759171, 0.307498, 0.833599)
+bones/51/rotation = Quaternion(-0.0192471, 0.143739, -0.0853719, 0.985738)
+bones/54/rotation = Quaternion(0.00529442, 0.0288603, 0.0953589, 0.99501)
+bones/56/rotation = Quaternion(-0.0142801, -0.0502441, -0.000142677, 0.998635)
+bones/58/rotation = Quaternion(-0.000428169, 0.019138, -0.107985, 0.993968)
+bones/59/rotation = Quaternion(-0.00247148, 0.0188482, 8.48892e-05, 0.999819)
+bones/60/rotation = Quaternion(0.00494181, -0.0376901, -7.65251e-05, 0.999277)
+bones/62/rotation = Quaternion(-0.0107332, 0.0793844, -0.217846, 0.97269)
+bones/63/rotation = Quaternion(0.0023266, -0.00627664, -0.000285918, 0.999978)
+bones/64/rotation = Quaternion(0.0187055, -0.0502293, -0.00122907, 0.998562)
+bones/66/rotation = Quaternion(0.0394622, -0.588053, 0.807767, 0.012211)
+bones/67/rotation = Quaternion(-0.39479, 1.29479e-17, -3.31273e-18, 0.918772)
+bones/68/rotation = Quaternion(-0.382284, -0.0985372, -0.229327, 0.889696)
+bones/69/rotation = Quaternion(0.392183, -1.09624e-17, -4.25456e-17, 0.919887)
+bones/70/rotation = Quaternion(-0.509288, -0.0442502, 0.0457053, 0.858242)
+bones/71/rotation = Quaternion(0.000471412, -0.000271366, 0.498891, 0.866664)
+bones/73/rotation = Quaternion(-0.587374, -0.0570991, 0.00770889, 0.807262)
+bones/74/rotation = Quaternion(-0.445934, -1.03268e-18, -4.4805e-18, 0.895066)
+bones/75/rotation = Quaternion(-0.442947, -0.0516458, -0.103659, 0.889036)
+bones/76/rotation = Quaternion(0.453346, 2.88886e-18, 3.75475e-18, 0.891334)
+bones/77/rotation = Quaternion(-0.445556, 0.0640324, 0.161295, 0.878273)
+bones/78/rotation = Quaternion(0.000473128, -0.000272354, 0.498891, 0.866664)

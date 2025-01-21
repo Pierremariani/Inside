@@ -1,0 +1,50 @@
+[gd_scene load_steps=9 format=3 uid="uid://cdu5abtkmnwi7"]
+
+[ext_resource type="Texture2D" uid="uid://bjgskpbt5cvn5" path="res://texture2/Textures/LogWall/LogWall_Diffuse.png" id="1_q7v2y"]
+[ext_resource type="PackedScene" uid="uid://dlunp81sr3hvs" path="res://player.tscn" id="2_hnuii"]
+[ext_resource type="PackedScene" uid="uid://b2mn5vlhlyy1m" path="res://tunnel.tscn" id="3_17quv"]
+[ext_resource type="PackedScene" uid="uid://vgyfmea6w3j5" path="res://tunnelv2.tscn" id="4_38g3v"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_g8fo2"]
+size = Vector3(173.352, 0.0340576, 102.182)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_3rqew"]
+albedo_color = Color(0.384314, 0.384314, 0.384314, 1)
+albedo_texture = ExtResource("1_q7v2y")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_uxtq4"]
+material = SubResource("StandardMaterial3D_3rqew")
+size = Vector2(20, 20)
+
+[sub_resource type="Environment" id="Environment_pbkpa"]
+background_mode = 1
+background_color = Color(0.0470588, 0.0470588, 0.0470588, 1)
+
+[node name="tunnelworld" type="Node3D"]
+
+[node name="floor" type="StaticBody3D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.73943, -0.00140381, -41.1228)
+shape = SubResource("BoxShape3D_g8fo2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+visible = false
+mesh = SubResource("PlaneMesh_uxtq4")
+
+[node name="Player" parent="." instance=ExtResource("2_hnuii")]
+transform = Transform3D(-0.0733078, 0, -0.997309, 0, 1, 0, 0.997309, 0, -0.0733078, 4.78204, 0.514448, -3.55412)
+
+[node name="tunnel" parent="." instance=ExtResource("3_17quv")]
+transform = Transform3D(0.006, 0, 0, 0, 0.006, 0, 0, 0, 0.006, 4.78625, -0.387746, -3.24632)
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_pbkpa")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("4_38g3v")]
+transform = Transform3D(-83.5129, 0, 45.2834, 0, 95, 0, -45.2834, 0, -83.5129, 23.5027, -0.446992, -26.286)
+
+[editable path="Player"]

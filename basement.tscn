@@ -1,0 +1,15 @@
+[gd_scene load_steps=4 format=3 uid="uid://mvods1iqpv2q"]
+
+[ext_resource type="PackedScene" uid="uid://cwnrry4f17th7" path="res://texture7/basement.glb" id="1_t85jc"]
+[ext_resource type="PackedScene" uid="uid://cdqo5ng6raq4y" path="res://Interactions/Interactable.tscn" id="2_y7867"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_oaymo"]
+size = Vector3(9.08594, 41.8252, 4.62745)
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_t85jc")]
+
+[node name="Interactable" parent="Sketchfab_model/root/GLTF_SceneRootNode/spade_64/Object_83" index="0" instance=ExtResource("2_y7867")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/root/GLTF_SceneRootNode/spade_64/Object_83/Interactable" index="0"]
+transform = Transform3D(1, -2.18309e-07, 0, 7.74631e-10, 1, 5.97813e-08, 0, 4.93093e-08, 1, 1.60065, 20.4126, 1.31997)
+shape = SubResource("BoxShape3D_oaymo")

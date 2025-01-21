@@ -1,0 +1,10 @@
+[gd_scene load_steps=2 format=3 uid="uid://bx6j36b2l8vhm"]
+
+[ext_resource type="Texture2D" uid="uid://drnop48245twh" path="res://images/scre.png" id="1_3txu6"]
+
+[node name="imgscreamer" type="Node2D"]
+
+[node name="Scre" type="Sprite2D" parent="."]
+position = Vector2(1080, 523)
+scale = Vector2(2.74969, 2.60585)
+texture = ExtResource("1_3txu6")

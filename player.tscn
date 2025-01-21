@@ -1,0 +1,310 @@
+[gd_scene load_steps=25 format=3 uid="uid://dlunp81sr3hvs"]
+
+[ext_resource type="Script" path="res://player.gd" id="1_khr6i"]
+[ext_resource type="Script" path="res://CameraHolder.gd" id="1_u657v"]
+[ext_resource type="Script" path="res://Camera3D.gd" id="2_3ysbf"]
+[ext_resource type="PackedScene" uid="uid://b4316j7xsqnsp" path="res://Interactions/player_interactor.tscn" id="4_psc75"]
+[ext_resource type="PackedScene" uid="uid://dexbfiv5pagk3" path="res://shovelhand.tscn" id="5_53055"]
+[ext_resource type="PackedScene" uid="uid://cp18g0rsp1qua" path="res://mask.tscn" id="6_fej1t"]
+[ext_resource type="AudioStream" uid="uid://cltaa14iljdrj" path="res://soundetmusic/WEAPWhip_Fouet complet 1 (ID 2961)_LS (mp3cut.net).mp3" id="6_i3xwx"]
+[ext_resource type="AudioStream" uid="uid://lhlmwlfiowp2" path="res://soundetmusic/sf_coup_couteau_13.mp3" id="7_03tnf"]
+[ext_resource type="Script" path="res://Panel.gd" id="8_xyb6i"]
+[ext_resource type="AudioStream" uid="uid://b0qixertqqwmd" path="res://soundetmusic/Les Zinzins De L'Espace (GORSKI Remix) - Iggy Pop.mp3" id="9_ekys7"]
+[ext_resource type="AudioStream" uid="uid://cu6ena438xo1u" path="res://soundetmusic/maskbreath.mp3" id="11_1inag"]
+[ext_resource type="AudioStream" uid="uid://cbj6uxxelibt1" path="res://soundetmusic/inspiration.mp3" id="12_thkon"]
+[ext_resource type="AudioStream" uid="uid://bhkxgs42t68ie" path="res://soundetmusic/expiration.mp3" id="13_2l331"]
+[ext_resource type="AudioStream" uid="uid://bs3gt6y1neoj3" path="res://soundetmusic/interrupteur.mp3" id="14_wgxpj"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x5aqy"]
+height = 1.99361
+
+[sub_resource type="CapsuleMesh" id="CapsuleMesh_mlr0h"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_dhioy"]
+size = Vector3(0.752441, 1, 1.72794)
+
+[sub_resource type="Animation" id="Animation_aedrw"]
+resource_name = "attack"
+length = 0.3
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:rotation")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.1001, 0.3),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0, 1.5708, 0), Vector3(2.53696e-08, 1.5708, -0.791001), Vector3(0, 1.5708, 0)]
+}
+
+[sub_resource type="Animation" id="Animation_vytlg"]
+resource_name = "walk"
+length = 0.5
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2, 0.5),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Vector3(0.476752, -0.590074, -0.400734), Vector3(0.476752, 0.25279, -0.400734), Vector3(0.476752, -0.590074, -0.400734)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_xubju"]
+_data = {
+"attack": SubResource("Animation_aedrw"),
+"walk": SubResource("Animation_vytlg")
+}
+
+[sub_resource type="Animation" id="Animation_4bf5s"]
+resource_name = "enleve"
+length = 1.5
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, -0.013142, -0.0234995, 0.116185, 1.1, 1, -0.013142, -0.0234995, -0.326768, 1.5, 1, 0.80992, -0.48434, -0.0145695)
+
+[sub_resource type="Animation" id="Animation_huwak"]
+resource_name = "put"
+length = 1.5
+tracks/0/type = "position_3d"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath(".")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = PackedFloat32Array(0, 1, 0.80508, -0.529663, -0.955239, 0.4, 1, -0.000843212, -0.058229, -0.335565, 1.3, 1, -0.000843212, -0.0260413, -0.129667, 1.5, 1, -0.000843212, -0.0826619, 0.0113484)
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_gjxky"]
+_data = {
+"enleve": SubResource("Animation_4bf5s"),
+"put": SubResource("Animation_huwak")
+}
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rvuyq"]
+size = Vector3(2.0625, 2.47119, 2)
+
+[node name="Player" type="CharacterBody3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.59797, 0.176982, -2.21238)
+script = ExtResource("1_khr6i")
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.559092, 0)
+shape = SubResource("CapsuleShape3D_x5aqy")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.573112, 0)
+mesh = SubResource("CapsuleMesh_mlr0h")
+
+[node name="CameraHolder" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.0555921, 0)
+script = ExtResource("1_u657v")
+
+[node name="Camera3D" type="Camera3D" parent="CameraHolder"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00960894, 0.992797, 0.0492277)
+script = ExtResource("2_3ysbf")
+
+[node name="RayCast3D" type="RayCast3D" parent="CameraHolder/Camera3D"]
+
+[node name="HoldPosition" type="Node3D" parent="CameraHolder/Camera3D"]
+
+[node name="SpotLight3D" type="SpotLight3D" parent="CameraHolder/Camera3D"]
+transform = Transform3D(0.992772, -0.115057, -0.0341405, 0.119794, 0.93274, 0.340066, -0.00728288, -0.341698, 0.939782, 0, 0, 0.898068)
+
+[node name="PlayerInteractor" parent="CameraHolder/Camera3D" node_paths=PackedStringArray("player") instance=ExtResource("4_psc75")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -1.03209, 0)
+player = NodePath("../../..")
+screamer_scene = null
+
+[node name="CollisionShape3D2" type="CollisionShape3D" parent="CameraHolder/Camera3D/PlayerInteractor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0191517, 0.995116, -0.269836)
+shape = SubResource("BoxShape3D_dhioy")
+
+[node name="shovelhand" parent="CameraHolder/Camera3D" instance=ExtResource("5_53055")]
+transform = Transform3D(-7.23998e-08, 0, 0.02, 0, 0.02, 0, -0.02, 0, -7.23998e-08, 0.632344, -0.513662, -0.481597)
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraHolder/Camera3D/shovelhand"]
+libraries = {
+"": SubResource("AnimationLibrary_xubju")
+}
+
+[node name="mask" parent="CameraHolder/Camera3D" instance=ExtResource("6_fej1t")]
+transform = Transform3D(-0.3, 0, 2.62268e-08, 0, 0.3, 0, -2.62268e-08, 0, -0.3, 0.80992, -0.48434, -0.0145695)
+visible = false
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="CameraHolder/Camera3D/mask"]
+libraries = {
+"": SubResource("AnimationLibrary_gjxky")
+}
+
+[node name="coup" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("6_i3xwx")
+volume_db = -21.158
+
+[node name="Hitbox" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Hitbox"]
+transform = Transform3D(0.7, 0, 0, 0, 0.7, 0, 0, 0, 0.7, -0.0269427, 0.571371, -0.35)
+shape = SubResource("BoxShape3D_rvuyq")
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="UI"]
+visible = false
+layout_mode = 0
+offset_left = -607.0
+offset_top = -255.0
+offset_right = 2067.0
+offset_bottom = 1284.0
+color = Color(1, 0, 0, 0.32549)
+
+[node name="weaponui" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="weaponui"]
+visible = false
+layout_mode = 0
+offset_left = 846.0
+offset_top = 63.0
+offset_right = 1412.0
+offset_bottom = 295.0
+theme_override_font_sizes/font_size = 50
+text = "FIND A WEAPON !
+"
+
+[node name="aie" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("7_03tnf")
+volume_db = -21.157
+
+[node name="menu" type="ColorRect" parent="."]
+visible = false
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 2375.0
+offset_bottom = 1219.0
+color = Color(0, 0, 0, 0.545098)
+
+[node name="resume" type="Button" parent="menu"]
+layout_mode = 0
+offset_left = 806.0
+offset_top = 110.0
+offset_right = 1202.0
+offset_bottom = 217.0
+theme_override_font_sizes/font_size = 50
+text = "Resume
+"
+
+[node name="quit" type="Button" parent="menu"]
+layout_mode = 0
+offset_left = 885.0
+offset_top = 253.0
+offset_right = 1121.0
+offset_bottom = 319.0
+theme_override_font_sizes/font_size = 30
+text = "Quit"
+
+[node name="Panel" type="Panel" parent="menu"]
+layout_mode = 0
+offset_left = 2.0
+offset_top = 3.0
+offset_right = 176.0
+offset_bottom = 72.0
+script = ExtResource("8_xyb6i")
+
+[node name="min" type="Label" parent="menu/Panel"]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 23.0
+theme_override_font_sizes/font_size = 35
+text = "00:"
+horizontal_alignment = 1
+
+[node name="sec" type="Label" parent="menu/Panel"]
+layout_mode = 0
+offset_left = 55.0
+offset_top = -1.0
+offset_right = 105.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 35
+text = "00."
+horizontal_alignment = 1
+
+[node name="msecs" type="Label" parent="menu/Panel"]
+layout_mode = 0
+offset_left = 106.0
+offset_top = -1.0
+offset_right = 146.0
+offset_bottom = 48.0
+theme_override_font_sizes/font_size = 35
+text = "00"
+horizontal_alignment = 1
+
+[node name="zinzin" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("9_ekys7")
+volume_db = -75.372
+
+[node name="maskui" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Label" type="Label" parent="maskui"]
+layout_mode = 0
+offset_left = 51.0
+offset_top = 41.0
+offset_right = 502.0
+offset_bottom = 83.0
+theme_override_font_sizes/font_size = 15
+text = "[Right-click] to put on the mask"
+
+[node name="breath" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("11_1inag")
+volume_db = -34.38
+
+[node name="inspiration" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("12_thkon")
+volume_db = -29.091
+
+[node name="expiration" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("13_2l331")
+volume_db = -37.025
+
+[node name="uiambiancemask" type="Control" parent="."]
+visible = false
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="ColorRect" type="ColorRect" parent="uiambiancemask"]
+layout_mode = 0
+offset_right = 2232.0
+offset_bottom = 1298.0
+color = Color(0.964706, 0, 0, 0.0509804)
+
+[node name="lampeson" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.7266, 0.610004, 7.09454)
+stream = ExtResource("14_wgxpj")
+volume_db = 5.769
+
+[connection signal="animation_started" from="CameraHolder/Camera3D/shovelhand/AnimationPlayer" to="." method="_on_animation_player_animation_started"]
+[connection signal="pressed" from="menu/resume" to="." method="_on_resume_pressed"]
+[connection signal="pressed" from="menu/quit" to="." method="_on_quit_pressed"]

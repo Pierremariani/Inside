@@ -1,0 +1,52 @@
+[gd_scene load_steps=9 format=3 uid="uid://belf14djwfdap"]
+
+[ext_resource type="PackedScene" uid="uid://brk7sr6nba5rj" path="res://corridorbase.tscn" id="1_h1juw"]
+[ext_resource type="Texture2D" uid="uid://bjgskpbt5cvn5" path="res://texture2/Textures/LogWall/LogWall_Diffuse.png" id="2_asg8h"]
+[ext_resource type="PackedScene" uid="uid://cn3k3227iqwyy" path="res://ennemierunner.tscn" id="3_uxqj0"]
+[ext_resource type="PackedScene" uid="uid://dlunp81sr3hvs" path="res://player.tscn" id="4_lacb4"]
+
+[sub_resource type="NavigationMesh" id="NavigationMesh_uuuh2"]
+vertices = PackedVector3Array(-9.5, 0.5, -9.5, -9.5, 0.5, 9.5, 9.5, 0.5, 9.5, 9.5, 0.5, -9.5)
+polygons = [PackedInt32Array(3, 2, 0), PackedInt32Array(0, 2, 1)]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_x58u2"]
+size = Vector3(21.8002, 0.0340576, 19.9727)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_0wnhy"]
+albedo_color = Color(0.384314, 0.384314, 0.384314, 1)
+albedo_texture = ExtResource("2_asg8h")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_tpdru"]
+material = SubResource("StandardMaterial3D_0wnhy")
+size = Vector2(20, 20)
+
+[node name="fullcoridors" type="Node3D"]
+
+[node name="corridor" parent="." instance=ExtResource("1_h1juw")]
+
+[node name="corridor2" parent="." instance=ExtResource("1_h1juw")]
+transform = Transform3D(-0.999824, 0, 0.0187438, 0, 1, 0, -0.0187438, 0, -0.999824, -16.2662, 0, -9.74723)
+
+[node name="NavigationRegion3D" type="NavigationRegion3D" parent="."]
+visible = false
+navigation_mesh = SubResource("NavigationMesh_uuuh2")
+
+[node name="floor" type="StaticBody3D" parent="NavigationRegion3D"]
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="NavigationRegion3D/floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.840914, -0.00140381, -0.0182912)
+shape = SubResource("BoxShape3D_x58u2")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="NavigationRegion3D/floor"]
+visible = false
+mesh = SubResource("PlaneMesh_tpdru")
+
+[node name="ennemierunner" parent="." instance=ExtResource("3_uxqj0")]
+transform = Transform3D(0.990648, 0, -0.136442, 0, 1, 0, 0.136442, 0, 0.990648, 4.55171, 0, -1.86385)
+
+[node name="Player" parent="." instance=ExtResource("4_lacb4")]
+transform = Transform3D(0.996877, 0, -0.0789638, 0, 1, 0, 0.0789638, 0, 0.996877, 4.467, 0.514448, 2.59467)
+
+[editable path="Player"]

@@ -1,0 +1,218 @@
+[gd_scene load_steps=54 format=3 uid="uid://bwcxx8uw1ivg2"]
+
+[ext_resource type="PackedScene" uid="uid://cikfs8lwq8a24" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_square_1.tscn" id="1_4d8u7"]
+[ext_resource type="PackedScene" uid="uid://cmds781w8g6r0" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_chair_2.tscn" id="2_hn5ws"]
+[ext_resource type="PackedScene" uid="uid://do2811ncu6o0j" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_stool_2.tscn" id="3_a1jom"]
+[ext_resource type="PackedScene" uid="uid://c6cmv33gbvwg8" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_square_2.tscn" id="4_67ki8"]
+[ext_resource type="PackedScene" uid="uid://l6ef5fb6a5sn" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_rectangle_3.tscn" id="5_abpnv"]
+[ext_resource type="PackedScene" uid="uid://bqxqy06wvjojb" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_chair_4.tscn" id="6_600n0"]
+[ext_resource type="PackedScene" uid="uid://c2us5uo0onr3j" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_rectangle_4.tscn" id="7_8r1re"]
+[ext_resource type="PackedScene" uid="uid://dk5416ob6nsbb" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_drawer_7.tscn" id="8_1l7th"]
+[ext_resource type="PackedScene" uid="uid://c2xbdkdygo0mo" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_square_small_1.tscn" id="9_46s5r"]
+[ext_resource type="PackedScene" uid="uid://lplnaei2tsfx" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_chair_3.tscn" id="10_pksxb"]
+[ext_resource type="PackedScene" uid="uid://btvh4mooxbcy2" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_rectangle_2.tscn" id="11_qolxs"]
+[ext_resource type="PackedScene" uid="uid://71uqvp0g5nmq" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_chair_5.tscn" id="12_68h47"]
+[ext_resource type="PackedScene" uid="uid://o7kq1ngbeqy" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_shelf_3.tscn" id="13_ph2vd"]
+[ext_resource type="PackedScene" uid="uid://wifkh4eyhccl" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_round_2.tscn" id="14_c4hbi"]
+[ext_resource type="PackedScene" uid="uid://cdia0gf751ka5" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_chair_1.tscn" id="15_r3o6d"]
+[ext_resource type="PackedScene" uid="uid://ud5wdrolssgc" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_square_small_2.tscn" id="16_ooq6o"]
+[ext_resource type="PackedScene" uid="uid://chlffew274hn7" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_rectangle_small_2.tscn" id="17_e1ksp"]
+[ext_resource type="PackedScene" uid="uid://k35mb6uvaoqo" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_rectangle_small_3.tscn" id="18_3jrns"]
+[ext_resource type="PackedScene" uid="uid://cvmhvvkm45f3y" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_chair_7.tscn" id="19_c2kid"]
+[ext_resource type="PackedScene" uid="uid://cdmpjpvhhuiuv" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_shelf_book_3.tscn" id="20_65gmp"]
+[ext_resource type="PackedScene" uid="uid://clvb8bjjmv1qv" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_chair_8.tscn" id="21_w0lol"]
+[ext_resource type="PackedScene" uid="uid://bd3h1kyvnef0g" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_rectangle_small_1.tscn" id="22_osf6s"]
+[ext_resource type="PackedScene" uid="uid://dgk2jab7rk236" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_chair_9.tscn" id="23_8q85q"]
+[ext_resource type="PackedScene" uid="uid://m8ef88efq80s" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_drawer_3.tscn" id="24_y0okg"]
+[ext_resource type="PackedScene" uid="uid://qt3sadhf1b7w" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_shelf_5.tscn" id="25_0eqmu"]
+[ext_resource type="PackedScene" uid="uid://bxja0q2mlm0tj" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_shelf_book_2.tscn" id="26_0vl42"]
+[ext_resource type="PackedScene" uid="uid://dpdsp0vqsmsdp" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_shelf_2.tscn" id="27_0h8fx"]
+[ext_resource type="PackedScene" uid="uid://bnaejdfud7kxb" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_round_1.tscn" id="28_7pqqb"]
+[ext_resource type="PackedScene" uid="uid://cp5tik6mewhhj" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_drawer_6.tscn" id="29_wjmnx"]
+[ext_resource type="PackedScene" uid="uid://cbg0cox2o267t" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_drawer_1.tscn" id="30_5il31"]
+[ext_resource type="PackedScene" uid="uid://cemfg0ihs284m" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_bed_2.tscn" id="31_ismwv"]
+[ext_resource type="PackedScene" uid="uid://dj7ntxl0gawsj" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_shelf_4.tscn" id="32_ami4o"]
+[ext_resource type="PackedScene" uid="uid://cpfa1y1xiyg72" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_shelf_display_2.tscn" id="33_dq8he"]
+[ext_resource type="PackedScene" uid="uid://cju3cif60labb" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_shelf_display_4.tscn" id="34_fs14h"]
+[ext_resource type="PackedScene" uid="uid://cvhff8kc5a4ra" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_drawer_2.tscn" id="35_ec4lm"]
+[ext_resource type="PackedScene" uid="uid://dalfchlas2o02" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_bench_1.tscn" id="36_e514f"]
+[ext_resource type="PackedScene" uid="uid://cjx7tqwbkdi5g" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_bench_2.tscn" id="37_sjc1c"]
+[ext_resource type="PackedScene" uid="uid://si1t877cjnkk" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_shelf_wall_2.tscn" id="38_f104r"]
+[ext_resource type="PackedScene" uid="uid://cf631bvsvcruf" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_shelf_wall_1.tscn" id="39_fwlqs"]
+[ext_resource type="PackedScene" uid="uid://cyy0jl65too8l" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_bed_1.tscn" id="40_kb58t"]
+[ext_resource type="PackedScene" uid="uid://2pd817kyylul" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_coat_hanger.tscn" id="41_16ccx"]
+[ext_resource type="PackedScene" uid="uid://biwyri56heorq" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_stool_1.tscn" id="42_d6e04"]
+[ext_resource type="PackedScene" uid="uid://c5krwetm2audr" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_drawer_5.tscn" id="43_eubvx"]
+[ext_resource type="PackedScene" uid="uid://c36dbn5gyxhx8" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_shelf_book_1.tscn" id="44_i6fsj"]
+[ext_resource type="PackedScene" uid="uid://b7c6r3nwjja2v" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_bench_3.tscn" id="45_lvsok"]
+[ext_resource type="PackedScene" uid="uid://btw45dhyrxe08" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_drawer_4.tscn" id="46_3satj"]
+[ext_resource type="PackedScene" uid="uid://0fl3i7bn80ng" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_chair_6.tscn" id="47_utkx7"]
+[ext_resource type="PackedScene" uid="uid://c54lrublyr3ux" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_cabinet.tscn" id="48_xfbbn"]
+[ext_resource type="PackedScene" uid="uid://dg365suqje257" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_table_shelf_1.tscn" id="49_jp4t6"]
+[ext_resource type="PackedScene" uid="uid://utvrywjnsfgr" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_pillars_round_1.tscn" id="50_v10h7"]
+[ext_resource type="PackedScene" uid="uid://bvadtfpjoh60i" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_pillars_round_2.tscn" id="51_ph681"]
+[ext_resource type="PackedScene" uid="uid://crk8pgy4ct3ym" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_pillars_square_1.tscn" id="52_kgmjc"]
+[ext_resource type="PackedScene" uid="uid://tyypr2sys7o4" path="res://texture/LoafbrrAssets/WoodFurnitures_2/Scenes/WoodFurnitures/furns_pillars_square_2.tscn" id="53_6b280"]
+
+[node name="wood" type="Node3D"]
+
+[node name="Furnitures" type="Node3D" parent="."]
+
+[node name="Furns_Table_Square_1" parent="Furnitures" instance=ExtResource("1_4d8u7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.12921, -0.00536001, -0.628782)
+
+[node name="Furns_Chair_2" parent="Furnitures" instance=ExtResource("2_hn5ws")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.63938, 0, -4.64135)
+
+[node name="Furns_Stool_2" parent="Furnitures" instance=ExtResource("3_a1jom")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.64379, 0, -3.71223)
+
+[node name="Furns_Table_Square_2" parent="Furnitures" instance=ExtResource("4_67ki8")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.16066, 0, -7.95459)
+
+[node name="Furns_Table_Rectangle_3" parent="Furnitures" instance=ExtResource("5_abpnv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.74726, -2.38419e-07, -3.39274)
+
+[node name="Furns_Chair_4" parent="Furnitures" instance=ExtResource("6_600n0")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.97757, 0, -3.53004)
+
+[node name="Furns_Table_Rectangle_4" parent="Furnitures" instance=ExtResource("7_8r1re")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.79419, 0, -5.58017)
+
+[node name="Furns_Drawer_7" parent="Furnitures" instance=ExtResource("8_1l7th")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.23663, 0, -8.55638)
+
+[node name="Furns_Table_Square_Small_1" parent="Furnitures" instance=ExtResource("9_46s5r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.09872, 0, -3.40864)
+
+[node name="Furns_Chair_3" parent="Furnitures" instance=ExtResource("10_pksxb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.32026, 0, -5.14594)
+
+[node name="Furns_Table_Rectangle_2" parent="Furnitures" instance=ExtResource("11_qolxs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9, 0, -7)
+
+[node name="Furns_Chair_5" parent="Furnitures" instance=ExtResource("12_68h47")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8, 0, -3)
+
+[node name="Furns_Table_Shelf_3" parent="Furnitures" instance=ExtResource("13_ph2vd")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.08881, -4.76837e-07, -6.55366)
+
+[node name="Furns_Table_Round_2" parent="Furnitures" instance=ExtResource("14_c4hbi")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.14163, 2.38419e-07, -10.232)
+
+[node name="Furns_Chair_1" parent="Furnitures" instance=ExtResource("15_r3o6d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.25729, 4.76837e-07, -5.12441)
+
+[node name="Furns_Table_Square_Small_2" parent="Furnitures" instance=ExtResource("16_ooq6o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.40708, -4.76837e-07, -2.30987)
+
+[node name="Furns_Table_Rectangle_Small_2" parent="Furnitures" instance=ExtResource("17_e1ksp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.0196, 0, -7.36522)
+
+[node name="Furns_Table_Rectangle_Small_3" parent="Furnitures" instance=ExtResource("18_3jrns")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.0532, 0, -4.2185)
+
+[node name="Furns_Chair_7" parent="Furnitures" instance=ExtResource("19_c2kid")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.86794, 0, -5.4205)
+
+[node name="Furns_Shelf_Book_3" parent="Furnitures" instance=ExtResource("20_65gmp")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.8346, 0, -6.90522)
+
+[node name="Furns_Chair_8" parent="Furnitures" instance=ExtResource("21_w0lol")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 11.2641, 0, -6.225)
+
+[node name="Furns_Table_Rectangle_Small_1" parent="Furnitures" instance=ExtResource("22_osf6s")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12.9757, 0, -4.99158)
+
+[node name="Furns_Chair_9" parent="Furnitures" instance=ExtResource("23_8q85q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.5728, 0, -6.41252)
+
+[node name="Furns_Drawer_3" parent="Furnitures" instance=ExtResource("24_y0okg")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 12, 0, -4)
+
+[node name="Furns_Table_Shelf_5" parent="Furnitures" instance=ExtResource("25_0eqmu")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2595, 0, -4.74978)
+
+[node name="Furns_Shelf_Book_2" parent="Furnitures" instance=ExtResource("26_0vl42")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16.4093, 0, -8.08456)
+
+[node name="Furns_Table_Shelf_2" parent="Furnitures" instance=ExtResource("27_0h8fx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.21481, 0, -11.5275)
+
+[node name="Furns_Table_Round_1" parent="Furnitures" instance=ExtResource("28_7pqqb")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 16, 0, -10)
+
+[node name="Furns_Drawer_6" parent="Furnitures" instance=ExtResource("29_wjmnx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 14.3378, 0, -3.6766)
+
+[node name="Furns_Drawer_1" parent="Furnitures" instance=ExtResource("30_5il31")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17.7084, 9.53674e-07, -5.31262)
+
+[node name="Furns_Bed_2" parent="Furnitures" instance=ExtResource("31_ismwv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 17, 0, -3)
+
+[node name="Furns_Table_Shelf_4" parent="Furnitures" instance=ExtResource("32_ami4o")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 13.5452, 0, -2.48283)
+
+[node name="Furns_Shelf_Display_2" parent="Furnitures" instance=ExtResource("33_dq8he")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.6715, 0, -2.75622)
+
+[node name="Furns_Shelf_Display_4" parent="Furnitures" instance=ExtResource("34_fs14h")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.4431, -9.53674e-07, -7.69031)
+
+[node name="Furns_Drawer_2" parent="Furnitures" instance=ExtResource("35_ec4lm")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.2808, 0, -2.65266)
+
+[node name="Furns_Bench_1" parent="Furnitures" instance=ExtResource("36_e514f")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 20.4647, 0, -4.16685)
+
+[node name="Furns_Bench_2" parent="Furnitures" instance=ExtResource("37_sjc1c")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.98308, 4.76837e-07, -2.30222)
+
+[node name="Furns_Shelf_Wall_2" parent="Furnitures" instance=ExtResource("38_f104r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0838344, 0.549309, -7.82591)
+
+[node name="Furns_Shelf_Wall_1" parent="Furnitures" instance=ExtResource("39_fwlqs")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.37025, 0.561629, -7.85799)
+
+[node name="Furns_Bed_1" parent="Furnitures" instance=ExtResource("40_kb58t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.26579, -4.76837e-07, -11.5596)
+
+[node name="Furns_CoatHanger" parent="Furnitures" instance=ExtResource("41_16ccx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10.7607, 0, -8.5619)
+
+[node name="Furns_Stool_1" parent="Furnitures" instance=ExtResource("42_d6e04")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.62331, 0, -2.67831)
+
+[node name="Furns_Drawer_5" parent="Furnitures" instance=ExtResource("43_eubvx")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.38393, 0, -10.4721)
+
+[node name="Furns_Shelf_Book_1" parent="Furnitures" instance=ExtResource("44_i6fsj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, -13)
+
+[node name="Furns_Bench_3" parent="Furnitures" instance=ExtResource("45_lvsok")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.78867, 4.76837e-07, -9.00464)
+
+[node name="Furns_Drawer_4" parent="Furnitures" instance=ExtResource("46_3satj")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.89278, -9.53674e-07, -7.2789)
+
+[node name="Furns_Chair_6" parent="Furnitures" instance=ExtResource("47_utkx7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.10528, 0, -4.27483)
+
+[node name="Furns_Cabinet" parent="Furnitures" instance=ExtResource("48_xfbbn")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.33897, 0, -10.5283)
+
+[node name="Furns_Table_Shelf_1" parent="Furnitures" instance=ExtResource("49_jp4t6")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.29537, 0, -1.31153)
+
+[node name="Furns_Pillars_Round_1" parent="Furnitures" instance=ExtResource("50_v10h7")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.20875, 4.76837e-07, -1.38346)
+
+[node name="Furns_Pillars_Round_2" parent="Furnitures" instance=ExtResource("51_ph681")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.51404, 0, -1.27918)
+
+[node name="Furns_Pillars_Square_1" parent="Furnitures" instance=ExtResource("52_kgmjc")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.31253, 0, -1.72736)
+
+[node name="Furns_Pillars_Square_2" parent="Furnitures" instance=ExtResource("53_6b280")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.32785, -4.76837e-07, -2.56231)

@@ -1,0 +1,45 @@
+[gd_scene load_steps=6 format=3 uid="uid://dm4pgb3bxm3us"]
+
+[ext_resource type="Texture2D" uid="uid://cytn015x6hx1a" path="res://images/558d70d8a37d44326c19ba20ff957128.jpg" id="1_hloys"]
+[ext_resource type="Script" path="res://mainmenugame.gd" id="1_py15d"]
+[ext_resource type="AudioStream" uid="uid://b0qixertqqwmd" path="res://soundetmusic/Les Zinzins De L'Espace (GORSKI Remix) - Iggy Pop.mp3" id="3_osf8e"]
+[ext_resource type="PackedScene" uid="uid://dlunp81sr3hvs" path="res://player.tscn" id="4_ly0lk"]
+[ext_resource type="PackedScene" uid="uid://dw0ih7fwdyq7k" path="res://signa.tscn" id="5_7wnc7"]
+
+[node name="Menu" type="Node3D"]
+script = ExtResource("1_py15d")
+
+[node name="558d70d8a37d44326c19Ba20Ff957128" type="Sprite2D" parent="."]
+position = Vector2(1075.5, 748.75)
+scale = Vector2(2.94973, 2.05774)
+texture = ExtResource("1_hloys")
+
+[node name="bstart" type="Button" parent="."]
+offset_left = 53.0
+offset_top = 72.0
+offset_right = 375.0
+offset_bottom = 235.0
+theme_override_font_sizes/font_size = 100
+text = "START
+"
+
+[node name="bquit" type="Button" parent="."]
+offset_left = 57.0
+offset_top = 276.0
+offset_right = 368.0
+offset_bottom = 413.0
+theme_override_font_sizes/font_size = 70
+text = "QUIT
+"
+
+[node name="musica" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("3_osf8e")
+attenuation_model = 3
+volume_db = -25.785
+max_db = 3.273
+autoplay = true
+attenuation_filter_db = 0.0
+
+[node name="Player" parent="." instance=ExtResource("4_ly0lk")]
+
+[node name="signa" parent="." instance=ExtResource("5_7wnc7")]

@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpsfsnaii8ogg"]
+
+[ext_resource type="PackedScene" uid="uid://bsrs6i66v34u8" path="res://texture7/table_bell.glb" id="1_y70qv"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_y70qv")]

@@ -1,0 +1,26 @@
+[gd_scene load_steps=5 format=3 uid="uid://cn3k3227iqwyy"]
+
+[ext_resource type="PackedScene" uid="uid://dsluslaviwapf" path="res://objectennemie.tscn" id="1_6bila"]
+[ext_resource type="Script" path="res://ennemierunner.gd" id="1_fmmvb"]
+[ext_resource type="PackedScene" uid="uid://2tx0t5t0a011" path="res://dead_message.tscn" id="3_w4rcn"]
+
+[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_x0dob"]
+radius = 0.352338
+height = 2.71385
+
+[node name="ennemierunner" type="CharacterBody3D" groups=["enemies"]]
+script = ExtResource("1_fmmvb")
+
+[node name="Sketchfab_Scene" parent="." instance=ExtResource("1_6bila")]
+
+[node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
+target_desired_distance = 0.9
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.999998, -0.0018675, 0, 0.0018675, 0.999998, 0, 0.967769, 0)
+shape = SubResource("CapsuleShape3D_x0dob")
+
+[node name="DeadMessage" parent="." instance=ExtResource("3_w4rcn")]
+visible = false
+
+[connection signal="target_reached" from="NavigationAgent3D" to="." method="_on_navigation_agent_3d_target_reached"]

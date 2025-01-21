@@ -1,0 +1,264 @@
+[gd_scene load_steps=36 format=3 uid="uid://02gtfu3rdire"]
+
+[ext_resource type="Texture2D" uid="uid://bjgskpbt5cvn5" path="res://texture2/Textures/LogWall/LogWall_Diffuse.png" id="1_2uta0"]
+[ext_resource type="Script" path="res://world2.gd" id="1_7fgcd"]
+[ext_resource type="PackedScene" uid="uid://dxhb7irnyktji" path="res://bureau.tscn" id="2_dj12g"]
+[ext_resource type="PackedScene" uid="uid://dlunp81sr3hvs" path="res://player.tscn" id="3_ttmk5"]
+[ext_resource type="PackedScene" uid="uid://bpsfsnaii8ogg" path="res://receptionbell.tscn" id="4_epu2j"]
+[ext_resource type="PackedScene" uid="uid://cdqo5ng6raq4y" path="res://Interactions/Interactable.tscn" id="5_tbd8k"]
+[ext_resource type="AudioStream" uid="uid://bf2unu26pv37s" path="res://soundetmusic/bell-98033.mp3" id="6_h114x"]
+[ext_resource type="AudioStream" uid="uid://c57u34aqmebpm" path="res://soundetmusic/tambouriner.wav" id="7_03tiq"]
+[ext_resource type="AudioStream" uid="uid://dmbfn5srpau74" path="res://soundetmusic/berceuse.mp3" id="8_4dbfq"]
+[ext_resource type="AudioStream" uid="uid://bs3gt6y1neoj3" path="res://soundetmusic/interrupteur.mp3" id="9_8ttyv"]
+[ext_resource type="AudioStream" uid="uid://1o6iqsojxpo0" path="res://soundetmusic/endstressmusic.mp3" id="10_kvq2a"]
+[ext_resource type="PackedScene" uid="uid://dsluslaviwapf" path="res://objectennemie.tscn" id="11_clhgi"]
+[ext_resource type="AudioStream" uid="uid://dfbaigbaoeqpi" path="res://soundetmusic/phasmophobia-ghost-attack-1_b6tVbw6.mp3" id="12_502xm"]
+[ext_resource type="PackedScene" uid="uid://dchdb2nehce0h" path="res://painting.tscn" id="13_358k6"]
+[ext_resource type="AudioStream" uid="uid://dpbxnoug8s6qd" path="res://soundetmusic/livre-1page.mp3" id="14_0eyid"]
+[ext_resource type="AudioStream" uid="uid://yuhyudydkjma" path="res://soundetmusic/poseobjet.mp3" id="15_c4ax4"]
+[ext_resource type="AudioStream" uid="uid://d36eff8ufmq3m" path="res://soundetmusic/tableau.mp3" id="17_63tko"]
+[ext_resource type="AudioStream" uid="uid://c2h8vkyoh12rr" path="res://soundetmusic/Horror Music & Creepy Sounds (320 kbps).mp3" id="18_ihq8n"]
+[ext_resource type="PackedScene" uid="uid://dvu05pvxc4agp" path="res://firstitem.tscn" id="19_h8s0y"]
+[ext_resource type="AudioStream" uid="uid://cwjr36i67nrwq" path="res://soundetmusic/pickupbruitage.mp3" id="20_lydkh"]
+[ext_resource type="AudioStream" uid="uid://bfdt6v1y6t667" path="res://soundetmusic/eclair.mp3" id="21_b361i"]
+[ext_resource type="AudioStream" uid="uid://d3ligvbfbiesg" path="res://soundetmusic/ok.mp3" id="22_2wc7w"]
+
+[sub_resource type="Environment" id="Environment_3bdh0"]
+background_mode = 1
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_m0tqp"]
+size = Vector3(13.2474, 0.0340576, 15.2301)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_1l7mu"]
+albedo_color = Color(0.384314, 0.384314, 0.384314, 1)
+albedo_texture = ExtResource("1_2uta0")
+uv1_scale = Vector3(10, 10, 10)
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_e5y8x"]
+material = SubResource("StandardMaterial3D_1l7mu")
+size = Vector2(20, 20)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_utdol"]
+size = Vector3(105.173, 61.3651, 177.257)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_7x3kn"]
+size = Vector3(722, 621.401, 174)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_6l1im"]
+size = Vector3(715.108, 596.093, 86.5601)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_am1s8"]
+size = Vector3(703.062, 618, 97)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_0jdm3"]
+size = Vector3(0.314545, 1.30316, 0.603271)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_v0jy7"]
+size = Vector3(1, 7.12903, 14.1291)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_pfm5h"]
+size = Vector3(10.5849, 8.77881, 0.842285)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2qnnw"]
+size = Vector3(1, 8.58215, 14.5713)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_t41kb"]
+size = Vector3(11.2683, 7.18066, 1)
+
+[node name="World2" type="Node3D"]
+script = ExtResource("1_7fgcd")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_3bdh0")
+
+[node name="floor" type="StaticBody3D" parent="."]
+metadata/_edit_lock_ = true
+metadata/_edit_group_ = true
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="floor"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.5138, 0.0878639, 8.27525)
+shape = SubResource("BoxShape3D_m0tqp")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="floor"]
+visible = false
+mesh = SubResource("PlaneMesh_e5y8x")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, -0.101786, 0.994806, 0, -0.994806, -0.101786, 0, 4.6688, 0)
+visible = false
+
+[node name="bureau" parent="." instance=ExtResource("2_dj12g")]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, -77.9366, 0, 14.1276)
+
+[node name="Player" parent="." instance=ExtResource("3_ttmk5")]
+transform = Transform3D(2, 0, 0, 0, 2, 0, 0, 0, 2, -74.2597, 0.817686, 9.55923)
+
+[node name="lamp1" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.997688, -0.00787159, 0.0675057, 0.0679631, -0.115554, 0.990973, -1.84734e-09, 0.99327, 0.115822, -72.5733, 4.94325, 6.96644)
+light_energy = 16.0
+light_indirect_energy = 1.151
+light_size = 0.009
+light_specular = 0.0
+spot_range = 5.34631
+
+[node name="lamp2" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.997688, -0.00787159, 0.0675057, 0.0679631, -0.115554, 0.990973, -1.84734e-09, 0.99327, 0.115822, -75.8708, 6.74712, 10.0631)
+light_energy = 16.0
+light_indirect_energy = 1.151
+light_size = 0.009
+light_specular = 0.0
+spot_range = 5.34631
+
+[node name="lamp3" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.997688, -0.00787159, 0.0675057, 0.0679631, -0.115554, 0.990973, -1.84734e-09, 0.99327, 0.115822, -69.0871, 7.35993, 4.19199)
+light_energy = 16.0
+light_indirect_energy = 1.151
+light_size = 0.009
+light_specular = 0.0
+spot_range = 5.96233
+spot_angle = 26.5313
+
+[node name="lamp4" type="SpotLight3D" parent="."]
+transform = Transform3D(-0.997688, -0.00787159, 0.0675057, 0.0679631, -0.115554, 0.990973, -1.84734e-09, 0.99327, 0.115822, -72.5733, 8.59009, 6.83204)
+light_color = Color(1, 1, 0.67451, 1)
+light_energy = 5.009
+light_indirect_energy = 1.151
+light_size = 0.009
+light_specular = 0.0
+spot_range = 11.0831
+
+[node name="ding" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.9616, 2.35835, 7.21353)
+stream = ExtResource("6_h114x")
+volume_db = -22.479
+
+[node name="toc1" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -77.965, 3.86273, 12.9564)
+stream = ExtResource("7_03tiq")
+volume_db = -2.76
+
+[node name="sonette" parent="." instance=ExtResource("4_epu2j")]
+transform = Transform3D(0.000113049, -7.75788e-05, 0.00599843, 0.000163316, 0.00599731, 7.44863e-05, -0.0059967, 0.000161871, 0.00011511, -74.0831, 2.20483, 7.22918)
+
+[node name="Interactable" parent="sonette" instance=ExtResource("5_tbd8k")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="sonette/Interactable"]
+transform = Transform3D(0.99998, 1.32248e-07, 1.00583e-07, 1.37836e-07, 1, 1.67696e-07, 2.81259e-07, -4.94765e-09, 1, -30.2672, 30.3558, 26.3623)
+shape = SubResource("BoxShape3D_utdol")
+
+[node name="berceuse" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -76.846, 2.8586, 8.29473)
+stream = ExtResource("8_4dbfq")
+volume_db = -29.091
+
+[node name="interrupteur" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -81.7266, 0.610004, 7.09454)
+stream = ExtResource("9_8ttyv")
+volume_db = -12.743
+
+[node name="endstress" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.2049, 2.917, 7.04516)
+stream = ExtResource("10_kvq2a")
+volume_db = -7.079
+
+[node name="enemie" parent="." instance=ExtResource("11_clhgi")]
+transform = Transform3D(1.78135, 0, -2.41387, 0, 3, 0, 2.41387, 0, 1.78135, -71.3107, -0.115791, 4.82065)
+visible = false
+
+[node name="enemiebruit" type="AudioStreamPlayer3D" parent="."]
+stream = ExtResource("12_502xm")
+volume_db = -7.933
+
+[node name="tab1" parent="." instance=ExtResource("13_358k6")]
+transform = Transform3D(-8.74228e-11, 0, 0.002, 0, 0.002, 0, -0.002, 0, -8.74228e-11, -76.241, 3.53233, 6.31459)
+
+[node name="Interactable" parent="tab1" instance=ExtResource("5_tbd8k")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tab1/Interactable"]
+transform = Transform3D(0.999998, 0, -4.61853e-14, 0, 1, 0, 4.61853e-14, 0, 0.999998, 13.3064, 293.8, -75.0469)
+shape = SubResource("BoxShape3D_7x3kn")
+
+[node name="tab3" parent="." instance=ExtResource("13_358k6")]
+transform = Transform3D(-8.74228e-11, 0, -0.002, 0, 0.002, 0, 0.002, 0, -8.74228e-11, -67.9404, 3.53233, 6.24628)
+
+[node name="Interactable" parent="tab3" instance=ExtResource("5_tbd8k")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tab3/Interactable"]
+transform = Transform3D(1, 0, -6.03961e-14, 0, 1, 0, 6.03961e-14, 0, 1, 2.39429, 325.886, -3.38281)
+shape = SubResource("BoxShape3D_6l1im")
+
+[node name="tab4" parent="." instance=ExtResource("13_358k6")]
+transform = Transform3D(-8.74228e-11, 0, 0.002, 0, 0.002, 0, -0.002, 0, -8.74228e-11, -77.3401, 3.53233, 12.2295)
+
+[node name="Interactable" parent="tab4" instance=ExtResource("5_tbd8k")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="tab4/Interactable"]
+transform = Transform3D(0.999998, 0, -4.61853e-14, 0, 1, 0, 4.61853e-14, 0, 0.999998, 1.36279, 308.5, -14.4375)
+shape = SubResource("BoxShape3D_am1s8")
+
+[node name="livre" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.9303, 2.27081, 11.4779)
+stream = ExtResource("14_0eyid")
+volume_db = -33.982
+
+[node name="poser" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -70.7902, 2.51057, 11.2116)
+stream = ExtResource("15_c4ax4")
+volume_db = -47.603
+
+[node name="painting" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.8581, 0, 6.69566)
+stream = ExtResource("17_63tko")
+volume_db = -25.123
+
+[node name="ambiance" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -74.6166, 0, 5.99676)
+stream = ExtResource("18_ihq8n")
+attenuation_model = 3
+volume_db = -55.22
+autoplay = true
+
+[node name="statue2" parent="." instance=ExtResource("19_h8s0y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.0585, 2.18175, 7.19056)
+visible = false
+
+[node name="Interactable" parent="statue2" instance=ExtResource("5_tbd8k")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="statue2/Interactable"]
+transform = Transform3D(1, 0, 0, 0, 0.998312, -0.0580867, 0, 0.0580867, 0.998312, -0.0399628, 0.149091, 0.0471921)
+shape = SubResource("BoxShape3D_0jdm3")
+
+[node name="pickupmusic" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.7676, 2.5569, 7.64026)
+stream = ExtResource("20_lydkh")
+volume_db = -26.341
+
+[node name="eclair" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72, 2, 8)
+stream = ExtResource("21_b361i")
+volume_db = -23.801
+
+[node name="ok" type="AudioStreamPlayer3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73, 2, 8)
+stream = ExtResource("22_2wc7w")
+volume_db = -15.868
+
+[node name="detours" type="StaticBody3D" parent="."]
+
+[node name="mur1" type="CollisionShape3D" parent="detours"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -67.1385, 3.02911, 8.40249)
+shape = SubResource("BoxShape3D_v0jy7")
+
+[node name="mur2" type="CollisionShape3D" parent="detours"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -72.5121, 3.8894, 14.5075)
+shape = SubResource("BoxShape3D_pfm5h")
+
+[node name="mur3" type="CollisionShape3D" parent="detours"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -78.1345, 3.84037, 8.06345)
+shape = SubResource("BoxShape3D_2qnnw")
+
+[node name="mur4" type="CollisionShape3D" parent="detours"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -73.0943, 3.09033, 1.95423)
+shape = SubResource("BoxShape3D_t41kb")
+
+[editable path="sonette/Interactable"]

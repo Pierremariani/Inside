@@ -1,0 +1,35 @@
+[gd_scene load_steps=7 format=3 uid="uid://dxhb7irnyktji"]
+
+[ext_resource type="PackedScene" uid="uid://1xugdp8p8yy8" path="res://texture4/silent_hill_2_baldwin_study_room_normal.glb" id="1_n64g2"]
+[ext_resource type="Script" path="res://bureau.gd" id="2_afsjy"]
+[ext_resource type="PackedScene" uid="uid://cdqo5ng6raq4y" path="res://Interactions/Interactable.tscn" id="2_r3prc"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_8spca"]
+size = Vector3(6.23047, 5.87634, 7.39563)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_2rx8d"]
+size = Vector3(9, 33, 67)
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_40ch6"]
+size = Vector3(4.71436, 5.11719, 2.4545)
+
+[node name="Bureau" instance=ExtResource("1_n64g2")]
+script = ExtResource("2_afsjy")
+
+[node name="Interactable" parent="Sketchfab_model/Collada visual scene group/Material2" index="0" instance=ExtResource("2_r3prc")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/Collada visual scene group/Material2/Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 9.90819, 57.5664, 28.579)
+shape = SubResource("BoxShape3D_8spca")
+
+[node name="Interactable" parent="Sketchfab_model/Collada visual scene group/Material22" index="0" instance=ExtResource("2_r3prc")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/Collada visual scene group/Material22/Interactable" index="0"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 100, 78, 30)
+shape = SubResource("BoxShape3D_2rx8d")
+
+[node name="Interactable" parent="Sketchfab_model/Collada visual scene group/Material35" index="0" instance=ExtResource("2_r3prc")]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Sketchfab_model/Collada visual scene group/Material35/Interactable" index="0"]
+transform = Transform3D(0.899138, 0.437665, -9.71812e-17, -0.437665, 0.899138, 2.23959e-17, 9.71812e-17, 2.23959e-17, 1, 71.1307, 24.0524, 22.064)
+shape = SubResource("BoxShape3D_40ch6")

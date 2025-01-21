@@ -1,0 +1,5 @@
+[gd_scene load_steps=2 format=3 uid="uid://dvu05pvxc4agp"]
+
+[ext_resource type="PackedScene" uid="uid://bsqkudonoyy0c" path="res://texture5/satan_jean-jacques_feuchere_1807-1852.glb" id="1_pthgb"]
+
+[node name="Sketchfab_Scene" instance=ExtResource("1_pthgb")]
